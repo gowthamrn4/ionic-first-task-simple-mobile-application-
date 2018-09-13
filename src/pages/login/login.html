@@ -1,0 +1,70 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+            <ion-title class="head">login</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <!----------input box username-------------->
+<form>
+<ion-grid>
+  <ion-row>
+    <ion-col col-12>
+      <ion-item>
+        <ion-label floating style="color:greenyellow">Username</ion-label>
+        <ion-input type="text" style="color:greenyellow"  name="email" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!-------------username box finished-->
+  <!---------input box password---------------------->  
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label floating style="color:greenyellow">Password</ion-label>
+          <ion-input type="password" style="color:greenyellow"  name="password" [(ngModel)]="user.password" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+   <!----------input box password finished------------->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+          <div padding>
+              <button ion-button block  class="primeBtn" (click)="login(user)">Sign In</button>
+            </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+            <div padding>
+                <button ion-button block  class="signupBtn" (click)="signup()">Sign Up</button>
+              </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+ </form>
+    
+  </ion-list>
+</ion-content>

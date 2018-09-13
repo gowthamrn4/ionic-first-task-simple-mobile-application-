@@ -1,0 +1,26 @@
+<ion-menu [content]="content">
+    <ion-content>
+        <div class="userdetails"padding text-center>
+            <img src="./assets/imgs/585e4bcdcb11b227491c3396.png" width="70" height="50"/>
+        </div>
+        <ion-list class="menu">
+            <button menuClose ion-item (click)="openPage('dashboard')">
+              Dashboard
+            </button>
+            <button menuClose ion-item (click)="openPage('profile')">
+                Profile
+              </button>
+              <button menuClose ion-item (click)="openPage('profile')">
+                Settings
+              </button>
+            <button menuClose ion-item (click)="logout()">
+                Logout
+              </button>
+        </ion-list>
+        <div class="Details" align=center>
+            <h6>Signed In</h6>
+            {{email}}
+        </div>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
